@@ -77,6 +77,7 @@ void execute(char *buffer)
 			continue;
 		}
 		function(&stack, linenumber, instruction);
+		session.value = NULL;
 		linenumber++;
 		i = 0;
 		line = strtok(buf, "\n");

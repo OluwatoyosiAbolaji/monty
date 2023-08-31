@@ -23,7 +23,7 @@ void pushf(stack_t **stack, unsigned int line_number)
 		}
 		node->prev = NULL;
 		node->next = *stack;
-		if (isint(session.value))
+		if (session.value && isint(session.value))
 			node->n = atoi(session.value);
 		else
 		{
