@@ -133,6 +133,8 @@ void pallf(stack_t **stack, unsigned int line_number)
 
 	(void) line_number;
 	node = *stack;
+	if (!node)
+		return;
 	for (i = 0; node->next; i++)
 		node = node->next;
 	for (i = 0; node->prev; i++)

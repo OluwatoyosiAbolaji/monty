@@ -126,7 +126,7 @@ void function(stack_t **stack, int linenumber, char *instruction)
 			return;
 		}
 	}
-	fprintf(stderr, "L%d: Unknown instruction %s\n", linenumber, instruction);
+	fprintf(stderr, "L%d: unknown instruction %s\n", linenumber, instruction);
 	free(session.buffer);
 	if (*stack)
 		free_stack(*stack);
