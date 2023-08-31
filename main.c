@@ -51,11 +51,12 @@ int main(int argc, char **argv)
 void execute(char *buffer)
 {
 	char *instruction = NULL, *line = NULL, *buf = buffer;
-	int i = 0, linenumber = 1;
+	int i = 0, linenumber = 0;
 	char *argument = NULL;
 	stack_t *stack = NULL;
 
 	line = strtok(buf, "\n");
+	linenumber++;
 	while (line)
 	{
 		buf = buf + strlen(line) + 1;
@@ -78,9 +79,9 @@ void execute(char *buffer)
 		}
 		function(&stack, linenumber, instruction);
 		session.value = NULL;
-		linenumber++;
 		i = 0;
 		line = strtok(buf, "\n");
+		linenumber++;
 	}
 	if (stack)
 		free_stack(stack);
