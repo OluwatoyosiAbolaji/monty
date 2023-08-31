@@ -1,21 +1,5 @@
-pall
-push 2
-pall
-push 
+push 1
 
-pall
-push 4
-push 6
-pall
-# push
-queue
-push 7
-push 8
-push 9
-pall
-# push
-stack
-push 10
-push 11
-push 12
+
+push 2
 pall
