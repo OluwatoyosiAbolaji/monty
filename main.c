@@ -78,10 +78,10 @@ void execute(char *buffer)
 			continue;
 		}
 		function(&stack, linenumber, instruction);
+		linenumber++;
 		session.value = NULL;
 		i = 0;
 		line = strtok(buf, "\n");
-		linenumber++;
 	}
 	if (stack)
 		free_stack(stack);
